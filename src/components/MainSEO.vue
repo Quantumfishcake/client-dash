@@ -1,6 +1,6 @@
 <template>
 
-  <div class="container">
+  <div class="">
     <div ref='SEOcontainer' v-if="seosem[0].seo">
     <Row1 v-if="everythingIsReady" v-bind:data='row1data'/>
     <Row2 />
@@ -8,9 +8,7 @@
     <Row4 />
     <Row5 />
     </div>
-    <div ref='SEMcontainer' v-if="seosem[1].sem">
-      <MainSEM />
-      </div>
+    
 </div>
 
 </template>

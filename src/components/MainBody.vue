@@ -2,11 +2,7 @@
 
   <div class="container">
     <div ref='SEOcontainer' v-if="seosem[0].seo">
-    <Row1 v-if="everythingIsReady" v-bind:data='row1data'/>
-    <Row2 />
-    <Row3 message='hello'/>
-    <Row4 />
-    <Row5 />
+    <MainSEO />
     </div>
     <div ref='SEMcontainer' v-if="seosem[1].sem">
       <MainSEM />
