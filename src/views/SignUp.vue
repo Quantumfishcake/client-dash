@@ -2,7 +2,7 @@
 <div class="container sign-up">
     <div class="row">
         <div class="col-6">
-           <img src="../assets/Longtail_logo2016.jpg"> 
+           <img src="https://i.ibb.co/F75LtMC/Longtail-logo2016.jpg"> 
         </div>
         <div class="col-6">
             <span class="login-header">Create New Account</span>

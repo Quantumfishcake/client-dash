@@ -4,7 +4,7 @@
        <div class='col-md-4'>
            <div class='row' style='margin: 0; padding: 0;'>
                <div class='col-md-8'>
-                <img src='../assets/images/LongtailUXsm2.png'  style='height: 80%;'/>
+                <img src='https://i.ibb.co/F75LtMC/Longtail-logo2016.jpg'  style='max-width: 200px; padding-top: 20px;'/>
                </div>
                <div class='col-md-4' style='margin: auto;'>
                 <span class='insights'>INSIGHTS</span>

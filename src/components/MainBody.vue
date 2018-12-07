@@ -49,7 +49,17 @@ export default {
       everythingIsReady: false
     }
   },
-
+   mounted () {
+    axios
+      .get('https://api.myjson.com/bins/t7zsi')
+      .then(response => (
+          this.info = response,
+          this.row1data = response,
+          this.everythingIsReady = true,
+          this.$store.state.data = response,
+          console.log(this.$store.state.data)
+      ))
+  },
 
   
  components: {

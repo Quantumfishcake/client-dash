@@ -2,13 +2,15 @@
 
   <div class="container">
     <div ref='SEOcontainer' v-if="seosem[0].seo">
-    <Row1 v-if="everythingIsReady1" v-bind:data='row1data'/>
+    <Row1 v-if="everythingIsReady" v-bind:data='row1data'/>
     <Row2 />
     <Row3 message='hello'/>
     <Row4 />
     <Row5 />
     </div>
-  
+    <div ref='SEMcontainer' v-if="seosem[1].sem">
+      <MainSEM />
+      </div>
 </div>
 
 </template>
@@ -22,7 +24,7 @@ import Row3 from './Rows/Row3.vue'
 import Row4 from './Rows/Row4.vue'
 import Row5 from './Rows/Row5.vue'
 import MainSEM from './MainSEM.vue'
-
+import store from '@/store';
 
 
 
@@ -43,7 +45,7 @@ export default {
     return {
       info: null,
       row1data: [''],
-      everythingIsReady1: false
+      everythingIsReady: false
     }
   },
    mounted () {
@@ -52,7 +54,7 @@ export default {
       .then(response => (
           this.info = response,
           this.row1data = response,
-          this.everythingIsReady1 = true,
+          this.everythingIsReady = true,
           this.$store.state.data = response,
           console.log(this.$store.state.data)
       ))
