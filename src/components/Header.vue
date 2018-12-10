@@ -2,7 +2,7 @@
 <div class='header'>
    <div class='row' style='margin-top: 0;'>
        <div class='col-md-4'>
-           <div class='row' style='margin: 0; padding: 0;'>
+           <div class='row' style='margin: 0; padding: 0; height: 100%'>
                <div class='col-md-8'>
                 <img src='https://i.ibb.co/F75LtMC/Longtail-logo2016.jpg'  style='max-width: 200px; padding-top: 20px;'/>
                </div>

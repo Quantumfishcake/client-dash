@@ -1,7 +1,15 @@
 <template>
  <div class="row  row2">
   <div class="col-md-8 bg-w">
-     <div class='rect-8' style='clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 0 0);} border-top-right-radius: 6px; border-bottom-right-radius: 6px'><span class='SEO'>SEO summary</span></div>
+      <div class='row m-0 mt-2'>
+          <div class="col-md-6">
+              <div class='rect-8' style='clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 0 0);} border-top-right-radius: 6px; border-bottom-right-radius: 6px'><span class='SEO'>SEO summary</span></div>
+          </div>
+          <div class="col-md-6">
+            <vue-monthly-picker v-model="date"  v-bind:monthLabels='months' v-bind:dateFormat='dateFormat' >
+            </vue-monthly-picker >
+          </div>
+      </div>
      <div class='row no-border'>
          <div class="col-md col-medium">
              <div class='focal-text'>42,082</div>
@@ -55,8 +63,27 @@
 </template>
 
 <script>
+import VueMonthlyPicker from 'vue-monthly-picker'
 
 export default {
-  name: 'Row2'
+  name: 'Row2',
+  data() {
+      return  {
+        year: null,
+        month: null,
+        date: null,
+        selectedMonth: null,
+        months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        dateFormat: 'MMMM YYYY'
+      }
+  },
+  created () {
+      this.year = new Date().getFullYear(),
+      this.month = new Date().getMonth(),
+      this.date = `${this.year}/${this.month}`
+  },
+   components: {
+        VueMonthlyPicker
+    }
 }
 </script>

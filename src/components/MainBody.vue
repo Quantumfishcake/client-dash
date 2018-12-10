@@ -2,10 +2,10 @@
 
   <div class="container">
     <div ref='SEOcontainer' v-if="seosem[0].seo">
-    <MainSEO />
+    <MainSEO v-if="everythingIsReady1" />
     </div>
     <div ref='SEMcontainer' v-if="seosem[1].sem">
-      <MainSEM />
+      <MainSEM v-if="everythingIsReady1"/>
       </div>
 </div>
 
@@ -40,24 +40,21 @@ export default {
   },
   data () {
     return {
-      info: null,
-      row1data: [''],
-      everythingIsReady: false
+      allData: null,
+      everythingIsReady1: false,
     }
   },
-   mounted () {
+   created () {
+
+    // get chart 1
     axios
-      .get('https://api.myjson.com/bins/t7zsi')
+      .get('https://api.myjson.com/bins/ndvtq')
       .then(response => (
-          this.info = response,
-          this.row1data = response,
-          this.everythingIsReady = true,
-          this.$store.state.data = response,
-          console.log(this.$store.state.data)
+          this.Data = response,
+          this.$store.state.allData = response,
+          this.everythingIsReady1 = true
       ))
   },
-
-  
  components: {
     Row1,
     Row2,
