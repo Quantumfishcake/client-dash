@@ -26,6 +26,15 @@ h1{
 .row {
   margin: 40px 10px;
 }
+
+.main-body-container {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+
+
+
 .med-blk-txt {
   font-family: Dosis;
   font-size: 22.4px;
@@ -48,27 +57,14 @@ h1{
   text-align: left;
   color: #c4c6c5;
 }
-.col-sm {
-  border: 1px solid grey;
-}
+
 .col-md-8, .col-md-4, .col-md-3 {
   border-radius: 10px;
 }
 .rounded{
   border-radius: 10px!important;
 }
-.focal-text {
-  height: 69px;
-  font-family: Dosis;
-  font-size: 55px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffc001;
-}
+
 .Leads-gene{
 
   font-family: Dosis;
@@ -117,14 +113,10 @@ h1{
   border: none;
   padding: 0;
 }
-.row2 {
-  height: 300px;
-}
-.col-medium {
-height: 150px;
-}
+
+
 .row-small {
-  height: 98px;
+  
   box-sizing: border-box;
 }
 .lg-num-blk{
@@ -212,12 +204,7 @@ height: 150px;
   border: 1px solid #e7e7e7;
   border-radius: 10px;
 }
-.row.toprow div.col-md-2{
-  margin: auto;
-}
-.row.toprow div.col-md-4{
-  margin: auto;
-}
+
 .insights {
   font-family: Dosis;
   font-size: 18px;
@@ -446,3 +433,36 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 20px;
 }
+
+
+
+
+
+
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+  .main-body-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+ }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+  
+ }
+ // Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+  
+}
+ // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .main-body-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+ }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

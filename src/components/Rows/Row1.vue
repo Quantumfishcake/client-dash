@@ -1,21 +1,27 @@
 <template>
- <div class="row toprow">
-    <div class='col-md-4 pl-5'>
+ <div class="row toprow h-100 equal">
+    <div class='col-12 col-md-4 align-items-center img-header-col my-auto'>
       <img src='../../assets/images/download.svg' />
     </div>
+<<<<<<< HEAD
     <div class='col-md-2 p-2 pl-4' style=' border-left: 1px solid #e7e7e7' >
       <div class='toprow-grey'>{{seosem ?  'ACTIVE SEO KEYWORDS' : 'ACTIVE SEM KEYWORDS'}}</div>
       <div class='toprow-blk'>{{seosem ?  data.data.SEO['active seo keywords'] : data.data.SEM['active seo keywords']}}</div>
+=======
+    <div class='col-3 col-md-2 align-items-center col-item' >
+      <div class='toprow-grey'>ACTIVE SEO KEYWORDS</div>
+      <div class='toprow-blk'>{{seosem[0].seo ?  data.data.SEO['active seo keywords'] : data.data.SEM['active seo keywords']}}</div>
+>>>>>>> 5db4a484f95c3f61bebe6f1f982c354d7544fab3
     </div>
-    <div class='col-md-2 p-2 pl-4' style=' border-left: 1px solid #e7e7e7'>
+    <div class='col-3 col-md-2 align-items-center  col-item'>
 <div class='toprow-grey'>ACTIVE PPC KEYWORDS</div>
       <div class='toprow-blk'>{{seosem ?  data.data.SEO['active ppc keywords'] : data.data.SEM['active ppc keywords']}}</div>
     </div>
-    <div class='col-md-2 p-2 pl-4' style=' border-left: 1px solid #e7e7e7'>
+    <div class='col-3 col-md-2 align-items-center col-item'>
 <div class='toprow-grey'># OF PRODUCTS</div>
       <div class='toprow-blk'>{{seosem ?  data.data.SEO['number of products'] : data.data.SEM['number of products']}}</div>
     </div>
-    <div class='col-md-2 p-2 pl-4' style=' border-left: 1px solid #e7e7e7'>
+    <div class='col-3 col-md-2 align-items-center col-item'>
 <div class='toprow-grey'>LAUNCH DATE</div>
       <div class='toprow-blk'>{{seosem ?  data.data.SEO['launch date'] : data.data.SEM['launch date']}}</div>
     </div>
@@ -38,3 +44,27 @@ export default {
 }
 
 </script>
+
+<style lang='scss' scoped>
+  .toprow {
+    padding: 0;
+  
+    .col-item {
+   margin-top: 20px;
+   margin-bottom: 20px;
+   padding-top: 20px;
+   padding-bottom:20px;
+   
+   border-left: 1px solid #e7e7e7;
+  }
+  }
+
+  @media (max-width: 991px) {
+    .img-header-col {
+      text-align: center;
+    }    
+   }
+
+</style>
+
+
