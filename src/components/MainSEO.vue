@@ -1,6 +1,6 @@
 <template>
-    <div >
-        <div >
+    <div>
+        <div>
           <Row1 />
           <Row2 />
           <Row3 />
