@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
     <div class="container">
         <div ref='SEOcontainer' v-if="seosem">
             <MainSEO v-if="everythingIsReady1" />
@@ -7,12 +6,6 @@
         <div ref='SEMcontainer' v-if="!seosem">
           <MainSEM v-if="everythingIsReady1"/>
         </div>
-=======
-
-  <div class="container-fluid main-body-container">
-    <div ref='SEOcontainer' v-if="seosem[0].seo">
-    <MainSEO v-if="everythingIsReady1" />
->>>>>>> 5db4a484f95c3f61bebe6f1f982c354d7544fab3
     </div>
 </template>
 

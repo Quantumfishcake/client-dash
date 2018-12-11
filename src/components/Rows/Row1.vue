@@ -3,15 +3,9 @@
     <div class='col-12 col-md-4 align-items-center img-header-col my-auto'>
       <img src='../../assets/images/download.svg' />
     </div>
-<<<<<<< HEAD
     <div class='col-md-2 p-2 pl-4' style=' border-left: 1px solid #e7e7e7' >
       <div class='toprow-grey'>{{seosem ?  'ACTIVE SEO KEYWORDS' : 'ACTIVE SEM KEYWORDS'}}</div>
       <div class='toprow-blk'>{{seosem ?  data.data.SEO['active seo keywords'] : data.data.SEM['active seo keywords']}}</div>
-=======
-    <div class='col-3 col-md-2 align-items-center col-item' >
-      <div class='toprow-grey'>ACTIVE SEO KEYWORDS</div>
-      <div class='toprow-blk'>{{seosem[0].seo ?  data.data.SEO['active seo keywords'] : data.data.SEM['active seo keywords']}}</div>
->>>>>>> 5db4a484f95c3f61bebe6f1f982c354d7544fab3
     </div>
     <div class='col-3 col-md-2 align-items-center  col-item'>
 <div class='toprow-grey'>ACTIVE PPC KEYWORDS</div>
