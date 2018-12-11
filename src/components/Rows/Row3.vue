@@ -1,8 +1,8 @@
 
 <template>
- <div class="row bg-w">
-    <div style='position: relative; width: 100%;'>
-      <chart />
+    <div class="row bg-w">
+      <div style='position: relative; width: 100%;'>
+        <chart />
       </div>
     </div>
 </template>

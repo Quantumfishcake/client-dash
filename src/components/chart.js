@@ -27,7 +27,7 @@ export default {
         this.gradient.addColorStop(1, '#ffc001');
         this.gradient2.addColorStop(0, '#4c4c4c')
         this.gradient2.addColorStop(1, '#2f2f2f');
-        this.seosem[0].seo ? (this.data1 = this.Data.data.SEO.chartData['2017'], this.data2 = this.Data.data.SEO.chartData['2018']) : (this.data1 = this.Data.data.SEM.chartData['2017'],  this.data2 = this.Data.data.SEM.chartData['2018'])
+        this.seosem ? (this.data1 = this.Data.data.SEO.chartData['2017'], this.data2 = this.Data.data.SEO.chartData['2018']) : (this.data1 = this.Data.data.SEM.chartData['2017'],  this.data2 = this.Data.data.SEM.chartData['2018'])
         this.highval = Math.max(...this.data1, ...this.data2) * 1.1,
         this.renderChart({
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],

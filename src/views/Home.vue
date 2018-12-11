@@ -2,7 +2,6 @@
   <div class="home">
     <Header />
     <MainBody/>
-    <!-- <button @click="logout">Logout</button> -->
   </div>
 </template>
 
@@ -19,7 +18,6 @@ export default {
   components: {
     Header,
     MainBody,
-    Row1
   },
   methods: {
     logout: function() {
@@ -29,6 +27,4 @@ export default {
     }
   }
 }
-
-
 </script>

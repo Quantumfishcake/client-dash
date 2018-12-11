@@ -1,20 +1,19 @@
 <template>
-<div class="container login"> 
-    <div class="row">
-        <div class="col-6">
-           <img src="https://i.ibb.co/F75LtMC/Longtail-logo2016.jpg"> 
-        </div>
-        <div class="col-6">
-            <span class="login-header">Member Login</span>
-            <input class="input100" type="text" v-model="email" placeholder="Email">
-            <input class="input100" type="password" v-model="password" placeholder="Password">
-            <button class="login100-form-btn" @click="login">connection</button>
-            <p class="change-location"><router-link to ="/sign-up">Create your Account</router-link></p>
+    <div class="container login"> 
+        <div class="row">
+            <div class="col-6">
+                <img src="https://i.ibb.co/F75LtMC/Longtail-logo2016.jpg"> 
+            </div>
+            <div class="col-6">
+                <span class="login-header">Member Login</span>
+                <input class="input100" type="text" v-model="email" placeholder="Email">
+                <input class="input100" type="password" v-model="password" placeholder="Password">
+                <button class="login100-form-btn" @click="login">connection</button>
+                <p class="change-location"><router-link to ="/sign-up">Create your Account</router-link></p>
+            </div>
         </div>
     </div>
-</div>
 </template>
-
 <script>
 import firebase from 'firebase';
 
@@ -42,8 +41,6 @@ export default {
 </script>
 
 <style scoped>
-
-
 .login {
     margin-top: 40px;
 }
@@ -66,7 +63,6 @@ p a {
     cursor: pointer;
 }
 </style>
-
 
 <style lang='scss'>
 @import '@/assets/css/login.scss';

@@ -74,12 +74,7 @@
                  <span>0.00%</span>
             </div>
         </div>
-
-       
-       
-
     </div>
-
 </template>
 
 <script>

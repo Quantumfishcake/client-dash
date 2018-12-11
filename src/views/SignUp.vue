@@ -1,18 +1,18 @@
 <template>
-<div class="container sign-up">
-    <div class="row">
-        <div class="col-6">
-           <img src="https://i.ibb.co/F75LtMC/Longtail-logo2016.jpg"> 
-        </div>
-        <div class="col-6">
-            <span class="login-header">Create New Account</span>
-            <input class="input100" type="text" v-model="email" placeholder="Email">
-            <input class="input100" type="password" v-model="password" placeholder="Password">
-            <button class="login100-form-btn" @click="signUp">Sign Up</button>
-            <p class="change-location"><router-link to ="/login">Login into your Account</router-link></p>
+    <div class="container sign-up">
+        <div class="row">
+            <div class="col-6">
+                <img src="https://i.ibb.co/F75LtMC/Longtail-logo2016.jpg"> 
+            </div>
+            <div class="col-6">
+                <span class="login-header">Create New Account</span>
+                <input class="input100" type="text" v-model="email" placeholder="Email">
+                <input class="input100" type="password" v-model="password" placeholder="Password">
+                <button class="login100-form-btn" @click="signUp">Sign Up</button>
+                <p class="change-location"><router-link to ="/login">Login into your Account</router-link></p>
+            </div>
         </div>
     </div>
-</div>
 </template>
 
 <script>
@@ -42,7 +42,6 @@ export default {
 </script>
 
 <style scoped>
-
 input {
     margin: 10px 0;
     width: 20%;

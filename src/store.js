@@ -19,10 +19,7 @@ export const store = new Vuex.Store({
             {name: '/buy/ghd-hair-straightener-in-australia', sessions: 411, transactions: 42, revenue: 2700.2},
             {name: '/buy/ghd/hair-dryer-afterplay', sessions: 753, transactions: 77, revenue: 2700.2},
         ],
-        seosem: [
-            {seo: true},
-            {sem: false}
-        ],
+        seosem: true,
         data: []
     }
 })

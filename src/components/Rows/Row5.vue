@@ -1,18 +1,17 @@
 <template>
- <div class='row'>
-<b-tabs>
-  <b-tab title="TOP PERFORMING LANDING PAGES"  :title-link-class="'tab-title-class'" active >
-    <TopPerforming />
-  </b-tab>
-  <b-tab title="MONTHLY INSIGHTS" :title-link-class="'tab-title-class'">
-     <Monthly />
-  </b-tab>
-  <b-tab title="SESSIONS BY DEVICE" :title-link-class="'tab-title-class'">
-    <Sessions />
-  </b-tab>
-</b-tabs>
-</div>
-
+    <div class='row'>
+        <b-tabs>
+          <b-tab title="TOP PERFORMING LANDING PAGES"  :title-link-class="'tab-title-class'" active >
+            <TopPerforming />
+          </b-tab>
+          <b-tab title="MONTHLY INSIGHTS" :title-link-class="'tab-title-class'">
+            <Monthly />
+          </b-tab>
+          <b-tab title="SESSIONS BY DEVICE" :title-link-class="'tab-title-class'">
+            <Sessions />
+          </b-tab>
+        </b-tabs>
+    </div>
 </template>
 
 <script>

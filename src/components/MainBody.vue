@@ -1,41 +1,25 @@
 <template>
-
-  <div class="container">
-    <div ref='SEOcontainer' v-if="seosem[0].seo">
-    <MainSEO v-if="everythingIsReady1" />
+    <div class="container">
+        <div ref='SEOcontainer' v-if="seosem">
+            <MainSEO v-if="everythingIsReady1" />
+        </div>
+        <div ref='SEMcontainer' v-if="!seosem">
+          <MainSEM v-if="everythingIsReady1"/>
+        </div>
     </div>
-    <div ref='SEMcontainer' v-if="seosem[1].sem">
-      <MainSEM v-if="everythingIsReady1"/>
-      </div>
-</div>
-
 </template>
 
 <script>
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import Row1 from './Rows/Row1.vue'
-import Row2 from './Rows/Row2.vue'
-import Row3 from './Rows/Row3.vue'
-import Row4 from './Rows/Row4.vue'
-import Row5 from './Rows/Row5.vue'
 import MainSEM from './MainSEM.vue'
 import MainSEO from './MainSEO.vue'
-import store from '@/store';
-
-
 
 export default {
   name: 'MainBody',
   computed: {
-    users() {
-      return this.$store.state.users
-      
-    },
-    seosem() {
-          
+    seosem() {   
       return this.$store.state.seosem
-
     }
   },
   data () {
@@ -44,11 +28,9 @@ export default {
       everythingIsReady1: false,
     }
   },
-   created () {
-
-    // get chart 1
+  created () {
     axios
-      .get('https://api.myjson.com/bins/ndvtq')
+      .get('https://api.myjson.com/bins/q7pt0')
       .then(response => (
           this.Data = response,
           this.$store.state.allData = response,
@@ -56,11 +38,6 @@ export default {
       ))
   },
  components: {
-    Row1,
-    Row2,
-    Row3,
-    Row4,
-    Row5,
     MainSEM,
     MainSEO
   }
