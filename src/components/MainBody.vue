@@ -1,6 +1,6 @@
 <template>
 
-  <div class="container">
+  <div class="container-fluid main-body-container">
     <div ref='SEOcontainer' v-if="seosem[0].seo">
     <MainSEO v-if="everythingIsReady1" />
     </div>
