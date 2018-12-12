@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="col-md-4 p-0" style='border-left: 40px solid ##FAF9F5;'>
-            <div class='row row-small px-0 py-4 bg-w ml-md-5  my-sm-1 my-md-0 m-0' style='border-top-left-radius: 10px; border-top-right-radius: 10px;'> 
+            <div class='row row-small px-0 py-4 bg-w ml-md-5 ml-sm-0 my-sm-1 my-md-0 m-0' style='border-top-left-radius: 10px; border-top-right-radius: 10px;'> 
                 <div class='col-md-6 m-auto'>
                     <div class='mid-txt'>Sessions</div>
                     <div class='convert-txt' :style="getColor('sessions')"><img :src="getArrow('sessions')" class="align-baseline pr-1"/>{{getLastMonthChange('sessions')[0]}}%</div>
@@ -36,7 +36,7 @@
                     <span class='lg-num-blk'>{{getMonthData('sessions')}}</span>
                 </div>
             </div>
-            <div class='row row-small px-0 py-4 bg-w ml-5 my-1 mr-0'> 
+            <div class='row row-small px-0 py-4 bg-w ml-md-5 my-1 ml-sm-1 mr-0'> 
                 <div class='col-md-6 m-auto'>
                     <div class='mid-txt'>Conversions</div>
                     <div class='convert-txt' :style="getColor('conversions')"><img :src="getArrow('conversions')" class="align-baseline pr-1" />{{getLastMonthChange('conversions')[0]}}%</div>
@@ -45,7 +45,7 @@
                     <span class='lg-num-blk'>{{getMonthData('conversions')}}</span>
                 </div>
             </div>
-            <div class='row row-small px-0 py-4 bg-w ml-5 my-1 mr-0' style='border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;'> 
+            <div class='row row-small px-0 py-4 bg-w ml-md-5 my-1 ml-sm-1 mr-0' style='border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;'> 
                 <div class='col-md-6 m-auto'>
                     <div class='mid-txt'>Conversion Rate</div>
                     <div class='convert-txt negative'><img src='../../assets/images/fill-37_2.png' class="align-baseline pr-1"/>-8.4%</div>
@@ -155,7 +155,9 @@ export default {
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { 
     .row-small {
-        margin-left: 0;
+        width: 32.73%;
+        float: left;
+
     }
  }
 
