@@ -1,31 +1,28 @@
 <template>
-
- <div class="row toprow h-100 equal">
-    <div class='col-12 col-md-4 align-items-center img-header-col my-auto'>
-      <img src='../../assets/images/download.svg' />
+    <div class="row toprow h-100 equal">
+        <div class='col-12 col-md-4 align-items-center img-header-col my-auto'>
+            <img src='../../assets/images/download.svg' />
+        </div>
+        <div class='col-3 col-md-2 align-items-center col-item' >
+            <div class='toprow-grey'>{{seosem ?  'ACTIVE SEO KEYWORDS' : 'ACTIVE SEM KEYWORDS'}}</div>
+            <div class='toprow-blk'>{{seosem ?  data.data.SEO['active seo keywords'] : data.data.SEM['active seo keywords']}}</div>
+        </div>
+        <div class='col-3 col-md-2 align-items-center  col-item'>
+        <div class='toprow-grey'>ACTIVE PPC KEYWORDS</div>
+          <div class='toprow-blk'>{{seosem ?  data.data.SEO['active ppc keywords'] : data.data.SEM['active ppc keywords']}}</div>
+        </div>
+        <div class='col-3 col-md-2 align-items-center col-item'>
+            <div class='toprow-grey'># OF PRODUCTS</div>
+            <div class='toprow-blk'>{{seosem ?  data.data.SEO['number of products'] : data.data.SEM['number of products']}}</div>
+        </div>
+        <div class='col-3 col-md-2 align-items-center col-item'>
+            <div class='toprow-grey'>LAUNCH DATE</div>
+            <div class='toprow-blk'>{{seosem ?  data.data.SEO['launch date'] : data.data.SEM['launch date']}}</div>
+        </div>
     </div>
-    <div class='col-3 col-md-2 align-items-center col-item' >
-      <div class='toprow-grey'>{{seosem ?  'ACTIVE SEO KEYWORDS' : 'ACTIVE SEM KEYWORDS'}}</div>
-      <div class='toprow-blk'>{{seosem ?  data.data.SEO['active seo keywords'] : data.data.SEM['active seo keywords']}}</div>
-    </div>
-    <div class='col-3 col-md-2 align-items-center  col-item'>
-<div class='toprow-grey'>ACTIVE PPC KEYWORDS</div>
-      <div class='toprow-blk'>{{seosem ?  data.data.SEO['active ppc keywords'] : data.data.SEM['active ppc keywords']}}</div>
-    </div>
-    <div class='col-3 col-md-2 align-items-center col-item'>
-<div class='toprow-grey'># OF PRODUCTS</div>
-      <div class='toprow-blk'>{{seosem ?  data.data.SEO['number of products'] : data.data.SEM['number of products']}}</div>
-    </div>
-    <div class='col-3 col-md-2 align-items-center col-item'>
-<div class='toprow-grey'>LAUNCH DATE</div>
-      <div class='toprow-blk'>{{seosem ?  data.data.SEO['launch date'] : data.data.SEM['launch date']}}</div>
-    </div>
-  </div>
-  
 </template>
 
 <script>
-
 export default {
   name: 'Row1',
   computed: {
@@ -44,17 +41,14 @@ export default {
 <style lang='scss' scoped>
   .toprow {
     padding: 0;
-  
     .col-item {
-   margin-top: 20px;
-   margin-bottom: 20px;
-   padding-top: 20px;
-   padding-bottom:20px;
-   
-   border-left: 1px solid #e7e7e7;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-top: 20px;
+      padding-bottom:20px;
+      border-left: 1px solid #e7e7e7;
+    }
   }
-  }
-
   @media (max-width: 991px) {
     .img-header-col {
       text-align: center;

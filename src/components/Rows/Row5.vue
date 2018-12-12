@@ -15,7 +15,6 @@
 </template>
 
 <script>
-
 import Vue from 'vue';
 import TopPerforming from './Row5-tabs/Top-performing.vue'
 import Sessions from './Row5-tabs/Sessions.vue'

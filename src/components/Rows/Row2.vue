@@ -64,62 +64,62 @@ import VueMonthlyPicker from 'vue-monthly-picker'
 //x.getUTCMonth()  returns value starting from 0
 
 export default {
-  name: 'Row2',
-  data() {
-      return  {
-        year: null,
-        month: null,
-        date: null,
-        selectedMonth: null,
-        months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        dateFormat: 'MMMM YYYY',
-        selectedMonth: 1
-      }
-  },
-  created () {
-      this.year = new Date().getFullYear(),
-      this.month = new Date().getMonth(),
-      this.date = `${this.year}/${this.month}`
-      this.selectedMonth = this.month
-  },
-  methods: {
-        timeChange: function (date){
-            var x = new Date(date) 
-            var finalDate = `${x.getMonth() }/${x.getFullYear()}`
-            this.selectedMonth = x.getMonth()
-            return finalDate
-        },
-        getMonthData (dataType) {
-            const currMonth = this.months[this.selectedMonth]
-            return this.$store.state.allData.data.SEO.monthlyData[currMonth][dataType]
-        },
-        getLastMonthChange (dataType) {
-            const lastMonthval = (this.selectedMonth == 0 ? this.months[11] : this.months[this.selectedMonth - 1])
-            const lastMonth = this.$store.state.allData.data.SEO.monthlyData[lastMonthval][dataType]
-            const thisMonth = this.$store.state.allData.data.SEO.monthlyData[this.months[this.selectedMonth]][dataType]
-            return thisMonth >= lastMonth ? [Math.round(((thisMonth - lastMonth) / lastMonth * 100) * 100) / 100, true] : [Math.round(((lastMonth - thisMonth) / lastMonth * 100) * 100) / 100, false]
-        },
-        getColor (dataType) {
-            var newcolor = this.getLastMonthChange(dataType)[1] ? '#66dab5' : 'red'
-            return {color: newcolor}
-        },
-        getArrow(dataType) {
-            var newImg = this.getLastMonthChange(dataType)[1] ? '37.png' : '37_2.png'
-            return require(`../../assets/images/fill-${newImg}`)
+    name: 'Row2',
+    data() {
+        return  {
+            year: null,
+            month: null,
+            date: null,
+            selectedMonth: null,
+            months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            dateFormat: 'MMMM YYYY',
+            selectedMonth: 1
         }
-  },
-  computed: {
-    storeData() {
-      return this.$store.state.allData;
     },
-    conversionRate() {
-        var data = this.$store.state.allData
-        return Math.round((this.getMonthData('conversions')/this.getMonthData('sessions') * 100) * 100) / 100
+    created () {
+        this.year = new Date().getFullYear(),
+        this.month = new Date().getMonth(),
+        this.date = `${this.year}/${this.month}`
+        this.selectedMonth = this.month
     },
-  },
-   components: {
-        VueMonthlyPicker
-    }
+    methods: {
+            timeChange: function (date){
+                var x = new Date(date) 
+                var finalDate = `${x.getMonth() }/${x.getFullYear()}`
+                this.selectedMonth = x.getMonth()
+                return finalDate
+            },
+            getMonthData (dataType) {
+                const currMonth = this.months[this.selectedMonth]
+                return this.$store.state.allData.data.SEO.monthlyData[currMonth][dataType]
+            },
+            getLastMonthChange (dataType) {
+                const lastMonthval = (this.selectedMonth == 0 ? this.months[11] : this.months[this.selectedMonth - 1])
+                const lastMonth = this.$store.state.allData.data.SEO.monthlyData[lastMonthval][dataType]
+                const thisMonth = this.$store.state.allData.data.SEO.monthlyData[this.months[this.selectedMonth]][dataType]
+                return thisMonth >= lastMonth ? [Math.round(((thisMonth - lastMonth) / lastMonth * 100) * 100) / 100, true] : [Math.round(((lastMonth - thisMonth) / lastMonth * 100) * 100) / 100, false]
+            },
+            getColor (dataType) {
+                var newcolor = this.getLastMonthChange(dataType)[1] ? '#66dab5' : 'red'
+                return {color: newcolor}
+            },
+            getArrow(dataType) {
+                var newImg = this.getLastMonthChange(dataType)[1] ? '37.png' : '37_2.png'
+                return require(`../../assets/images/fill-${newImg}`)
+            }
+    },
+    computed: {
+        storeData() {
+        return this.$store.state.allData;
+        },
+        conversionRate() {
+            var data = this.$store.state.allData
+            return Math.round((this.getMonthData('conversions')/this.getMonthData('sessions') * 100) * 100) / 100
+        },
+    },
+    components: {
+            VueMonthlyPicker
+        }
 }
 </script>
 
@@ -136,6 +136,14 @@ export default {
   text-align: center;
   color: #ffc001;
 }
+.vue-monthly-picker {
+    width: 40%;
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+}
+
+
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) { 

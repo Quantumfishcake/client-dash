@@ -1,12 +1,10 @@
 <template>
     <div>
-        <div>
-          <Row1 />
-          <Row2 />
-          <Row3 />
-          <Row4 />
-          <Row5 />
-        </div>
+        <Row1 />
+        <Row2 />
+        <Row3 />
+        <Row4 />
+        <Row5 />
     </div>
 </template>
 
