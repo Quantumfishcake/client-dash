@@ -8,6 +8,7 @@ $primary-text-color: #D3D5D4;
 body {
   margin: 0;
   background-color: $primary-color;
+  overflow-x: hidden;
 }
 
 .header {
@@ -273,6 +274,8 @@ font-weight: 500;
   border: none;
   // background-color: #f2f1eb;
 }
+
+
 .nav-link, .nav-link.active {
   background-color: #f2f1eb;
   height: 60px;
@@ -454,7 +457,15 @@ input:checked + .slider:before {
  }
  // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { 
-  
+  // .nav-item:nth-child(1){
+  //   width: 43%;
+  //  }
+  //  .nav-item:nth-child(2){
+  //   width: 29%;
+  //  }
+  //  .nav-item:nth-child(3){
+  //   width: 28%;
+  //  }
 }
  // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 

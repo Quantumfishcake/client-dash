@@ -1,5 +1,6 @@
 <template>
-    <div class='row'>
+  <div style="width:100%; overflow-x:auto;">
+    <div class='row table-wrapper'>
         <b-tabs>
           <b-tab title="TOP PERFORMING LANDING PAGES"  :title-link-class="'tab-title-class'" active >
             <TopPerforming />
@@ -11,6 +12,7 @@
             <Sessions />
           </b-tab>
         </b-tabs>
+    </div>
     </div>
 </template>
 
@@ -30,8 +32,41 @@ export default {
   }
 }
 </script>
+<style lang='scss' scoped>
+
+.table-wrapper {
+width: 767px;
+}
 
 
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+
+ }
+
+ @media (min-width: 767px) and (max-width: 1045px) { 
+
+ }
+
+ // Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+  
+ }
+
+
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+
+  
+ }
+
+ // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+
+ }
+
+</style>
 
 
 

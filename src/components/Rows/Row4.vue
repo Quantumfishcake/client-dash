@@ -1,6 +1,6 @@
 <template>
  <div class="row  rounded" >
-   <div class='col-sm-6 col-md-3 p-0 rounded-col-wrapper'>
+   <div class='col-sm-6 col-md-3 p-0 mb-sm-1 rounded-col-wrapper'>
        <div class='row mx-0 bg-w my-0  rounded-left rounded-col'>
            <div class='col-sm-3 col-md-6 my-auto pl-4'>
                <div class='mid-txt'>bounce rate</div>
@@ -12,7 +12,7 @@
        </div>
       
    </div>
-   <div class='col-sm-6 col-md-3 p-0 m-auto rounded-col-wrapper'>
+   <div class='col-sm-6 col-md-3 p-0 p-0 mb-sm-1 m-auto rounded-col-wrapper'>
 
      <div class='row mx-1 bg-w my-0 rounded-col' >
            <div class='col-sm-3 col-md-6 pr-0 my-auto'>
