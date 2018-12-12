@@ -29,23 +29,23 @@
        <div class='row mx-0 bg-w my-0  rounded-right rounded-col'>
            <div class='col-md-3 my-auto serp-changes-wrapper'>
                <span class='mid-txt'>Serp Changes</span></div>
-           <div class='col-sm-4 col-md-3 m-auto position-relative serp-col'>
+           <div class='col-4 col-sm-4 col-md-3 m-auto position-relative serp-col'>
                <div class=' border p-1 rounded' >
                <span class='med-grey-txt align-text-top'>#11-50</span>
-               <span class="position-absolute med-blk-txt" style='bottom: 3px; right: 22px'>25<sup>-3</sup></span>
+               <span class="position-absolute med-blk-txt">25<sup>-3</sup></span>
                </div>
            </div>
-           <div class='col-sm-4 col-md-3 m-auto serp-col'>
+           <div class='col-4 col-sm-4 col-md-3 m-auto serp-col'>
                <div class=' border p-1 rounded'>
                <span class='med-grey-txt align-text-top'>#4-10</span>
-               <span class="position-absolute med-blk-txt" style='bottom: 3px; right: 22px'>0<sup>-1</sup></span>
+               <span class="position-absolute med-blk-txt">0<sup>-1</sup></span>
                </div>
            </div>
 
-           <div class='col-sm-4 col-md-3 m-auto serp-col'>
+           <div class='col-4 col-sm-4 col-md-3 m-auto serp-col'>
                <div class=' border p-1 rounded'>
                <span class='med-grey-txt align-text-top'>#1-3</span>
-               <span class="position-absolute med-blk-txt" style='bottom: 3px; right: 22px'>0</span>
+               <span class="position-absolute med-blk-txt">0</span>
                </div>
            </div>
        </div>
@@ -71,6 +71,10 @@ export default {
     }
     }
 }
+.position-absolute {
+bottom: 3px;
+right: 22px
+}
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) { 
@@ -81,15 +85,24 @@ export default {
 
  @media (min-width: 767px) and (max-width: 1045px) { 
     .med-grey-txt {
-        padding-bottom: 30px;
+        padding-bottom: 5px;
         display: block;
         text-align: center;
     }
+    .med-blk-txt {
+        display: block;
+    }
+    .position-absolute {
+position: inherit !important;
+display: block;
+text-align: center;
+
+}
  }
 
  // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { 
-    
+  
  }
 
 
@@ -102,16 +115,25 @@ export default {
   .serp-col {
 
     }
-    .med-grey-txt {
-        padding-bottom: 30px;
-        display: block;
-        text-align: center;
-    }
+  
  }
 
  // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
+   .med-grey-txt {
+        padding-bottom: 5px;
+        display: block;
+        text-align: center;
+    }
+    .med-blk-txt {
+        display: block;
+    }
+    .position-absolute {
+position: inherit !important;
+display: block;
+text-align: center;
 
+}
  }
 
 </style>
