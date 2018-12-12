@@ -1,9 +1,10 @@
 <template>
+
  <div class="row toprow h-100 equal">
     <div class='col-12 col-md-4 align-items-center img-header-col my-auto'>
       <img src='../../assets/images/download.svg' />
     </div>
-    <div class='col-md-2 p-2 pl-4' style=' border-left: 1px solid #e7e7e7' >
+    <div class='col-3 col-md-2 align-items-center col-item' >
       <div class='toprow-grey'>{{seosem ?  'ACTIVE SEO KEYWORDS' : 'ACTIVE SEM KEYWORDS'}}</div>
       <div class='toprow-blk'>{{seosem ?  data.data.SEO['active seo keywords'] : data.data.SEM['active seo keywords']}}</div>
     </div>
@@ -20,6 +21,7 @@
       <div class='toprow-blk'>{{seosem ?  data.data.SEO['launch date'] : data.data.SEM['launch date']}}</div>
     </div>
   </div>
+  
 </template>
 
 <script>

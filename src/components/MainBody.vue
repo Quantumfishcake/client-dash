@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container-fluid main-body-container">
         <div ref='SEOcontainer' v-if="seosem">
             <MainSEO v-if="everythingIsReady1" />
         </div>

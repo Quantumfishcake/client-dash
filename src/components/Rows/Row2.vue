@@ -11,23 +11,23 @@
                     <span></span>
                 </div>
             </div>
-            <div class='row no-border'>
-                <div class="col-md col-medium">
+            <div class='row no-border seo-summary'>
+                <div class="col">
                     <div class='focal-text'>{{getMonthData('monthlyRev')}}</div>
                     <div class='Leads-gene m-auto w-75 pt-3'><span>Revenue / leads Generated this month</span></div>
                 </div>
-                <div class="col-md inside-border col-medium">
+                <div class="col inside-border ">
                     <div class='focal-text'>120,218</div>
                     <div class='Leads-gene m-auto w-75 pt-3'><span>Revenue / Leads Generated To Date</span></div>  
                 </div>
-                <div class="col-md col-medium">
+                <div class="col">
                     <div class='focal-text'>86%</div>
                     <div class='Leads-gene m-auto w-75 pt-3'><span>% of Forecast Achieved</span></div>
                 </div>
             </div>
         </div>
         <div class="col-md-4 p-0" style='border-left: 40px solid ##FAF9F5;'>
-            <div class='row row-small px-0 py-4 bg-w ml-5 m-0' style='border-top-left-radius: 10px; border-top-right-radius: 10px;'> 
+            <div class='row row-small px-0 py-4 bg-w ml-md-5  my-sm-1 my-md-0 m-0' style='border-top-left-radius: 10px; border-top-right-radius: 10px;'> 
                 <div class='col-md-6 m-auto'>
                     <div class='mid-txt'>Sessions</div>
                     <div class='convert-txt' :style="getColor('sessions')"><img :src="getArrow('sessions')" class="align-baseline pr-1"/>{{getLastMonthChange('sessions')[0]}}%</div>
