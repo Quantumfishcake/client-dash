@@ -1,10 +1,10 @@
 <template>
     <div class='header'>
         <div class='row' style='margin-top: 0;'>
-            <div class='col-md-4'>
+            <div class='col-sm-5 col-md-4'>
                 <div class='row' style='margin: 0; padding: 0; height: 100%'>
-                    <div class='col-md-8'>
-                        <img src='https://i.ibb.co/F75LtMC/Longtail-logo2016.jpg'  style='max-width: 200px; padding-top: 20px;'/>
+                    <div class='col-sm-8 lux-logo'>
+                        <img src='https://i.ibb.co/F75LtMC/Longtail-logo2016.jpg'  style='max-width: 200px;'/>
                     </div>
                     <div class='col-4' style='margin: auto;'>
                         <span class='insights'>INSIGHTS</span>
@@ -12,12 +12,12 @@
                     </div>
                 </div>
             </div>
-            <div class='col-sm-6 col-md-3 order-md-3' style='margin: auto;'>
+            <div class='col-sm-5 col-md-3 order-md-3' style='margin: auto;'>
                 <div class='row' style='margin: 0; text-align: center; height: 83px;'>
-                    <div class='col-4 bg-w seo-sem'  style='margin: auto; border-left: 1px solid #efeeea; border-right: 1px solid #efeeea; height: 83px; line-height:75px; border-radius: 0;'>
+                    <div class='col-4 bg-w seo-sem notifications'  style='margin: auto; border-left: 1px solid #efeeea; border-right: 1px solid #efeeea; height: 83px; line-height:75px; border-radius: 0;'>
                         <span class='helper'><img src='../assets/images/9-bell.png' style='vertical-align: middle; '/></span>
                     </div>
-                    <div class='col-6 seo-sem' style='margin: auto'><img src='../assets/images/2-exit.png' class='pr-2'/><span><a @click="logout" href='/'>LOGOUT</a></span></div>
+                    <div class='col-6 seo-sem logout' style='margin: auto'><img src='../assets/images/2-exit.png' class='pr-2'/><span><a @click="logout" href='/'>LOGOUT</a></span></div>
                 </div>
             </div>
             <div class='col-sm-12 col-md-4  order-md-2' style='margin: auto;'>
@@ -91,11 +91,17 @@ export default {
 
 
 <style lang='scss' scoped>
+.row {
+    margin: 0;
+}
 .header {
     .lux-logo { 
        img {
         width: 100%;
        }
+    }
+    .notifications, .logout {
+        margin-right: 0 !important;
     }
 }
 </style>

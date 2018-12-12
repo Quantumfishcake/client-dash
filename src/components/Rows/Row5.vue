@@ -34,9 +34,7 @@ export default {
 </script>
 <style lang='scss' scoped>
 
-.table-wrapper {
-width: 767px;
-}
+
 
 
 // Large devices (desktops, less than 1200px)
@@ -57,7 +55,9 @@ width: 767px;
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { 
-
+.table-wrapper {
+width: 767px;
+}
   
  }
 
