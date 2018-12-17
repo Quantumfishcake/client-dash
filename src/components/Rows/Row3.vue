@@ -1,8 +1,8 @@
-
 <template>
 <div style="width:100%;">
-<button @click='toggle = !toggle'> click here </button>
+
   <div v-show='toggle'>showing
+    <button @click='toggle = !toggle'> click here </button>
     <div class="row bg-w">
       <div class="chart-wrapper" style='position: relative; width: 100%;'>
         <chart />
@@ -22,9 +22,42 @@
     },
     data() {
        return {
-     toggle: true
+     toggle: true,
+           windowWidth: 0,
+           windowHeight: 0
+     
    }
+
     },
+      mounted() {
+          this.$nextTick(function() {
+              window.addEventListener('resize', this.getWindowWidth);
+              window.addEventListener('resize', this.getWindowHeight);
+
+              //Init
+              this.getWindowWidth();
+              this.getWindowHeight();
+          })
+
+      },
+
+      methods: {
+          getWindowWidth(event) {
+              this.windowWidth = document.documentElement.clientWidth;
+              if (this.windowWidth < 500) {
+                  this.toggle = false;
+                  console.log(this.windowWidth);
+              }
+          },
+
+          getWindowHeight(event) {
+              this.windowHeight = document.documentElement.clientHeight;
+          }
+      },
+      beforeDestroy() {
+          window.removeEventListener('resize', this.getWindowWidth);
+          window.removeEventListener('resize', this.getWindowHeight);
+      },
     components: {
       chart, 
     }
