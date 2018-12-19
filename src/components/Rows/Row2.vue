@@ -26,37 +26,37 @@
                 </div>
             </div>
         </div>
-        <div class='col-md-4 '>
+        <div class='col-md-4 cl4'>
         <div class="row p-0 m-0" style='border-left: 40px solid ##FAF9F5;'>
-            <div class=' col-lg-12 col-4 px-0 py-4 bg-w ml-md-5 ml-sm-0 my-sm-1 my-md-0 m-0 sm-mt-1' style='border-top-left-radius: 10px; border-top-right-radius: 10px;'> 
+            <div class=' col-lg-12 col-4 px-0 py-4 bg-w  ml-sm-0 my-sm-1 my-md-0 m-0 sm-mt-1 box-left' > 
                 <div class='row m-0'>
-                <div class='col-md-6 col-6 m-auto '>
+                <div class='col-md-6 col-12 m-auto '>
                     <div class='mid-txt'>Sessions</div>
                     <div class='convert-txt' :style="getColor('sessions')"><img :src="getArrow('sessions')" class="align-baseline pr-1"/>{{getLastMonthChange('sessions')[0]}}%</div>
                 </div>  
-                <div class='col-md-6  col-6 right pr-4 '>
+                <div class='col-md-6  col-12 right pr-4 '>
                     <span class='lg-num-blk'>{{getMonthData('sessions')}}</span>
                 </div>
                 </div>
             </div>
-            <div class=' col-lg-12 col-4 px-0 py-4 bg-w ml-md-5 my-1 ml-sm-1 mr-0'> 
+            <div class=' col-lg-12 col-4 px-0 py-4 bg-w  my-1  mr-0 border-lr box-mid'> 
                 <div class='row m-0'>
-                <div class='col-md-6 col-6 m-auto '>
+                <div class='col-md-6 col-12 m-auto '>
                     <div class='mid-txt'>Conversions</div>
                     <div class='convert-txt' :style="getColor('conversions')"><img :src="getArrow('conversions')" class="align-baseline pr-1" />{{getLastMonthChange('conversions')[0]}}%</div>
                 </div>  
-                <div class='col-md-6  col-6 right pr-4 '>
+                <div class='col-md-6  col-12 right pr-4 '>
                     <span class='lg-num-blk'>{{getMonthData('conversions')}}</span>
                 </div>
                 </div>
             </div>
-            <div class=' col-lg-12 col-4 px-0 py-4 bg-w ml-md-5 my-1 ml-sm-1 mr-0' style='border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;'> 
+            <div class=' col-lg-12 col-4 px-0 py-4 bg-w  mr-0 box-right' > 
                 <div class='row m-0'>
-                <div class='col-md-6 col-6 m-auto '>
+                <div class='col-md-6 col-12 m-auto '>
                     <div class='mid-txt'>Conversion Rate</div>
                     <div class='convert-txt negative'><img src='../../assets/images/fill-37_2.png' class="align-baseline pr-1"/>-8.4%</div>
                 </div> 
-                <div class='col-md-6 col-6 right pr-4 '>
+                <div class='col-md-6 col-12 right pr-4 '>
                     <span class='lg-num-blk'>{{conversionRate}}%</span>
                 </div>
                 </div>
@@ -91,37 +91,34 @@ export default {
         this.selectedMonth = this.month
     },
     methods: {
-            timeChange: function (date){
-                var x = new Date(date) 
-                var finalDate = `${x.getMonth() }/${x.getFullYear()}`
-                this.selectedMonth = x.getMonth()
-                return finalDate
-            },
-            getMonthData (dataType) {
-                const currMonth = this.months[this.selectedMonth]
-                return this.$store.state.allData.data.SEO.monthlyData[currMonth][dataType]
-            },
-            getLastMonthChange (dataType) {
-                const lastMonthval = (this.selectedMonth == 0 ? this.months[11] : this.months[this.selectedMonth - 1])
-                const lastMonth = this.$store.state.allData.data.SEO.monthlyData[lastMonthval][dataType]
-                const thisMonth = this.$store.state.allData.data.SEO.monthlyData[this.months[this.selectedMonth]][dataType]
-                return thisMonth >= lastMonth ? [Math.round(((thisMonth - lastMonth) / lastMonth * 100) * 100) / 100, true] : [Math.round(((lastMonth - thisMonth) / lastMonth * 100) * 100) / 100, false]
-            },
-            getColor (dataType) {
-                var newcolor = this.getLastMonthChange(dataType)[1] ? '#66dab5' : 'red'
-                return {color: newcolor}
-            },
-            getArrow(dataType) {
-                var newImg = this.getLastMonthChange(dataType)[1] ? '37.png' : '37_2.png'
-                return require(`../../assets/images/fill-${newImg}`)
-            }
+        timeChange: function (date){
+            const x = new Date(date) 
+            const finalDate = `${x.getMonth() }/${x.getFullYear()}`
+            this.selectedMonth = x.getMonth()
+            return finalDate
+        },
+        getMonthData (dataType) {
+            const currMonth = this.months[this.selectedMonth]
+            return this.$store.state.allData.data.SEO.monthlyData[currMonth][dataType]
+        },
+        getLastMonthChange (dataType) {
+            const monthlyData = this.$store.state.allData.data.SEO.monthlyData
+            const lastMonthval = (this.selectedMonth == 0 ? this.months[11] : this.months[this.selectedMonth - 1])
+            const lastMonth = monthlyData[lastMonthval][dataType]
+            const thisMonth = monthlyData[this.months[this.selectedMonth]][dataType]
+            return thisMonth >= lastMonth ? [Math.round(((thisMonth - lastMonth) / lastMonth * 100) * 100) / 100, true] : [Math.round(((lastMonth - thisMonth) / lastMonth * 100) * 100) / 100, false]
+        },
+        getColor (dataType) {
+            const newcolor = this.getLastMonthChange(dataType)[1] ? '#66dab5' : 'red'
+            return {color: newcolor}
+        },
+        getArrow(dataType) {
+            const newImg = this.getLastMonthChange(dataType)[1] ? '37.png' : '37_2.png'
+            return require(`../../assets/images/fill-${newImg}`)
+        }
     },
     computed: {
-        storeData() {
-        return this.$store.state.allData;
-        },
         conversionRate() {
-            var data = this.$store.state.allData
             return Math.round((this.getMonthData('conversions')/this.getMonthData('sessions') * 100) * 100) / 100
         },
     },
@@ -150,7 +147,18 @@ export default {
     bottom: 10px;
     right: 50px;
 }
-
+.cl4{
+    padding-left: 15px;
+    padding-right: 0;
+}
+.box-left{
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+}
+.box-right{
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
 
 
 // Large devices (desktops, less than 1200px)
@@ -182,6 +190,22 @@ export default {
     .sm-mt-1{
         margin-top: 0.25rem!important;
     }
+ .cl4{
+    padding-left: 0px;
+}
+.border-lr{
+    border-left: 5px solid #faf9f5;
+    border-right: 5px solid #faf9f5;
+}
+.box-mid, .box-left, .box-right {
+    border-radius: 10px
+}
+.my-1{
+    margin-bottom: 0 !important;
+}
+.box-right{
+ margin-top: 0.25rem;
+}
  }
 
  // Extra small devices (portrait phones, less than 576px)

@@ -11,8 +11,8 @@
                     </div> -->
                 </div>
             </div>
-            <div class='col-sm-6 col-md-3 order-md-3' style='margin: auto;'>
-                <div class='row' style='margin: 0; text-align: center; height: 83px;'>
+            <div class='col-sm-6 col-md-3 order-md-3 m-auto'>
+                <div class='row m-0 text-center logout-wrapper' style='height: 83px;'>
                     <!-- <div class='col-4 bg-w seo-sem notifications'  style='margin: auto; border-left: 1px solid #efeeea; border-right: 1px solid #efeeea; height: 83px; line-height:75px; border-radius: 0;'>
                         <span class='helper'><img src='../assets/images/9-bell.png' style='vertical-align: middle; '/></span>
                     </div> -->
@@ -79,7 +79,6 @@ export default {
         margin: auto;
        img {
             width: 100%;
-
        }
     }
     .notifications, .logout {
@@ -89,5 +88,15 @@ export default {
 .col-sm-6 {
     max-width: 50%!important;
 }
+@media (max-width: 767.98px) { 
+    .logout, .lux-logo{
+    margin: 0!important;
+    margin-top: 15px!important;
+    margin-bottom: 15px!important;
+    }
+    .logout-wrapper{
+        height: 50px!important;
+    }
 
+ }
 </style>

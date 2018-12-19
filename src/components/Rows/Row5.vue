@@ -1,5 +1,5 @@
 <template>
-  <div class='row' style="width:100%; overflow-x:auto;">
+  <div class="active row">
     <div class='table-wrapper'>
         <b-tabs nav-wrapper-class='navwrap'>
           <b-tab title="TOP PERFORMING"  :title-link-class="'tab-title-class'" title-item-class='third' active >
@@ -32,6 +32,7 @@ export default {
 </script>
 <style lang='scss' scoped>
 
+
 .nav-item{
   width: 33%;
 }
@@ -62,6 +63,9 @@ export default {
   }
   div .w-33 {
     width: 95vw !important;
+  }
+  .active{
+    width:100%;
   }
 }
 
