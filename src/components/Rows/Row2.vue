@@ -26,34 +26,42 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 p-0" style='border-left: 40px solid ##FAF9F5;'>
-            <div class='row row-small px-0 py-4 bg-w ml-md-5 ml-sm-0 my-sm-1 my-md-0 m-0' style='border-top-left-radius: 10px; border-top-right-radius: 10px;'> 
-                <div class='col-md-6 m-auto text-sm-center'>
+        <div class='col-md-4 '>
+        <div class="row p-0 m-0" style='border-left: 40px solid ##FAF9F5;'>
+            <div class=' col-lg-12 col-4 px-0 py-4 bg-w ml-md-5 ml-sm-0 my-sm-1 my-md-0 m-0 sm-mt-1' style='border-top-left-radius: 10px; border-top-right-radius: 10px;'> 
+                <div class='row m-0'>
+                <div class='col-md-6 col-6 m-auto '>
                     <div class='mid-txt'>Sessions</div>
                     <div class='convert-txt' :style="getColor('sessions')"><img :src="getArrow('sessions')" class="align-baseline pr-1"/>{{getLastMonthChange('sessions')[0]}}%</div>
                 </div>  
-                <div class='col-md-6 right pr-4 text-sm-center'>
+                <div class='col-md-6  col-6 right pr-4 '>
                     <span class='lg-num-blk'>{{getMonthData('sessions')}}</span>
                 </div>
+                </div>
             </div>
-            <div class='row row-small px-0 py-4 bg-w ml-md-5 my-1 ml-sm-1 mr-0'> 
-                <div class='col-md-6 m-auto text-sm-center'>
+            <div class=' col-lg-12 col-4 px-0 py-4 bg-w ml-md-5 my-1 ml-sm-1 mr-0'> 
+                <div class='row m-0'>
+                <div class='col-md-6 col-6 m-auto '>
                     <div class='mid-txt'>Conversions</div>
                     <div class='convert-txt' :style="getColor('conversions')"><img :src="getArrow('conversions')" class="align-baseline pr-1" />{{getLastMonthChange('conversions')[0]}}%</div>
                 </div>  
-                <div class='col-md-6 right pr-4 text-sm-center'>
+                <div class='col-md-6  col-6 right pr-4 '>
                     <span class='lg-num-blk'>{{getMonthData('conversions')}}</span>
                 </div>
+                </div>
             </div>
-            <div class='row row-small px-0 py-4 bg-w ml-md-5 my-1 ml-sm-1 mr-0' style='border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;'> 
-                <div class='col-md-6 m-auto text-sm-center'>
+            <div class=' col-lg-12 col-4 px-0 py-4 bg-w ml-md-5 my-1 ml-sm-1 mr-0' style='border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;'> 
+                <div class='row m-0'>
+                <div class='col-md-6 col-6 m-auto '>
                     <div class='mid-txt'>Conversion Rate</div>
                     <div class='convert-txt negative'><img src='../../assets/images/fill-37_2.png' class="align-baseline pr-1"/>-8.4%</div>
                 </div> 
-                <div class='col-md-6 right pr-4 text-sm-center'>
+                <div class='col-md-6 col-6 right pr-4 '>
                     <span class='lg-num-blk'>{{conversionRate}}%</span>
                 </div>
+                </div>
             </div>
+        </div>
         </div>
     </div>
 </template>
@@ -166,9 +174,13 @@ export default {
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { 
     .row-small {
-        width: 32.73%;
-        float: left;
-
+        width: 100%;
+        padding: 5px 0!important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .sm-mt-1{
+        margin-top: 0.25rem!important;
     }
  }
 

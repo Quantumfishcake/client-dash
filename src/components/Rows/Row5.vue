@@ -1,23 +1,22 @@
 <template>
-  <div style="width:100%; overflow-x:auto;">
-    <div class='row table-wrapper'>
-        <b-tabs>
-          <b-tab title="TOP PERFORMING LANDING PAGES"  :title-link-class="'tab-title-class'" active >
+  <div class='row' style="width:100%; overflow-x:auto;">
+    <div class='table-wrapper'>
+        <b-tabs nav-wrapper-class='navwrap'>
+          <b-tab title="TOP PERFORMING"  :title-link-class="'tab-title-class'" title-item-class='third' active >
             <TopPerforming />
           </b-tab>
-          <b-tab title="MONTHLY INSIGHTS" :title-link-class="'tab-title-class'">
+          <b-tab title="MONTHLY INSIGHTS" :title-link-class="'tab-title-class'" title-item-class='third'>
             <Monthly />
           </b-tab>
-          <b-tab title="SESSIONS BY DEVICE" :title-link-class="'tab-title-class'">
+          <b-tab title="SESSIONS BY DEVICE" :title-link-class="'tab-title-class'" title-item-class='third'>
             <Sessions />
           </b-tab>
         </b-tabs>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
 import TopPerforming from './Row5-tabs/Top-performing.vue'
 import Sessions from './Row5-tabs/Sessions.vue'
 import Monthly from './Row5-tabs/Monthly-insights.vue'
@@ -33,8 +32,12 @@ export default {
 </script>
 <style lang='scss' scoped>
 
-
-
+.nav-item{
+  width: 33%;
+}
+.third {
+    width: 95vw !important;
+  }
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) { 
@@ -54,11 +57,13 @@ export default {
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { 
-.table-wrapper {
-width: 767px;
+  .table-wrapper {
+    width: 767px;
+  }
+  div .w-33 {
+    width: 95vw !important;
+  }
 }
-  
- }
 
  // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 

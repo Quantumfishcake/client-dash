@@ -16,7 +16,7 @@
       message: String
     },
     components: {
-      chart, 
+      chart 
     }
   }
 </script>

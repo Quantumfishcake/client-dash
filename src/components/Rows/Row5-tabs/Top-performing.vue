@@ -3,24 +3,24 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col" class='mid-txt'>Landing Page</th>
-            <th scope="col" class='mid-txt'>Sessions</th>
-            <th scope="col" class='mid-txt'>Transactions</th>
-            <th scope="col" class='mid-txt'>Revenue</th>
+            <th scope="col" class='mid-txt fourty'>Landing Page</th>
+            <th scope="col" class='mid-txt twenty'>Sessions</th>
+            <th scope="col" class='mid-txt twenty'>Transactions</th>
+            <th scope="col" class='mid-txt twenty'>Revenue</th>
           </tr>
         </thead>
         <tbody class='table-data'>
           <tr v-for="(item, index) in topPerforming" :key='index'>
-            <th scope="row" >{{index + 1}}.  {{item.name}}</th>
-            <td>{{item.sessions.toLocaleString()}}</td>
-            <td>{{item.transactions.toLocaleString()}}</td>
-            <td>{{item.revenue.toLocaleString()}}</td>
+            <th scope="row" class='fourty'>{{index + 1}}.  {{item.name}}</th>
+            <td class='twenty'>{{item.sessions.toLocaleString()}}</td>
+            <td class='twenty'>{{item.transactions.toLocaleString()}}</td>
+            <td class='twenty'>{{item.revenue.toLocaleString()}}</td>
           </tr>
           <tr>
-            <td><b>GRAND TOTAL</b></td>
-            <td><b>{{calculateTotal[0]}}</b></td>
-            <td><b>{{calculateTotal[1]}}</b></td>
-            <td><b>{{calculateTotal[2]}}</b></td>
+            <td class='fourty'><b>GRAND TOTAL</b></td>
+            <td class='twenty'><b>{{calculateTotal[0]}}</b></td>
+            <td class='twenty'><b>{{calculateTotal[1]}}</b></td>
+            <td class='twenty'><b>{{calculateTotal[2]}}</b></td>
           </tr>
         </tbody>
       </table>
@@ -28,8 +28,6 @@
 </template>
 
 <script>
-import Vue from 'vue';
-
 export default {
   name: 'TopPerforming',
   computed: {
@@ -48,4 +46,13 @@ export default {
   },
 }
 </script>
+
+<style>
+.fourty {
+  width: 40%
+}
+.twenty {
+  width: 20%;
+}
+</style>
 

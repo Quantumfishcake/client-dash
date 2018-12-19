@@ -2,11 +2,11 @@
  <div class="row  rounded" >
    <div class='col-sm-6 col-md-3 p-0 mb-sm-1 rounded-col-wrapper'>
        <div class='row mx-0 bg-w my-0  rounded-left rounded-col'>
-           <div class='col-sm-3 col-md-6 my-auto pl-4'>
-               <div class='mid-txt'>bounce rate</div>
-               <div class='convert-txt'> 13.2% </div>
+           <div class='col-sm-3 col-md-6 my-auto pl-4 col-6'>
+               <div class='mid-txt text-align-sm-left'>bounce rate</div>
+               <div class='convert-txt text-align-sm-left'> 13.2% </div>
             </div>
-           <div class='col-sm-3 col-md-6 my-auto lg-num-blk-wrapper'><span class='lg-num-blk'>39.29%</span></div>
+           <div class='col-sm-3 col-md-6 my-auto lg-num-blk-wrapper col-6 text-align-sm-right'><span class='lg-num-blk'>39.29%</span></div>
            
 
        </div>
@@ -14,11 +14,11 @@
    </div>
    <div class='col-sm-6 col-md-3 p-0 p-0 mb-sm-1 m-auto rounded-col-wrapper'>
 
-     <div class='row mx-1 bg-w my-0 rounded-col' >
-           <div class='col-sm-3 col-md-6 pr-0 my-auto'>
+     <div class='row bg-w my-0 rounded-col m-0' >
+           <div class='col-sm-3 col-md-6 pr-0 my-auto col-6'>
                <div class='mid-txt'>Average Keword Positions</div>
             </div>
-           <div class='col-sm-3 col-md-3 my-auto p-1 mobile-center' style=''><span><img src='../../assets/images/fill-37.png' class='align-baseline pr-1'/></span><span class='lrg-colored'>13</span></div>
+           <div class='col-sm-3 col-md-3 my-auto mobile-center col-6 text-align-sm-right' style=''><span><img src='../../assets/images/fill-37.png' class='align-baseline pr-1'/></span><span class='lrg-colored'>13</span></div>
            
            <!-- <div class='col-md-3 my-auto p-1 mobile-center' style=''><span><img src='../../assets/images/fill-37_3.png' class='align-baseline pr-1'/></span><span class='lrg-colored negative'>8</span></div> -->
 
@@ -109,6 +109,12 @@ text-align: center;
 @media (max-width: 767.98px) { 
     .mid-txt, .mobile-center,.convert-txt,.lg-num-blk-wrapper,.serp-changes-wrapper {
         text-align: center;
+    }
+    .text-align-sm-right{
+        text-align: right;
+    }
+    .text-align-sm-left{
+        text-align: left;
     }
  }
 

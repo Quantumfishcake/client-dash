@@ -1,23 +1,19 @@
 <template>
-    <div class="row toprow h-100 equal">
-        <div class='col-12 col-md-4 align-items-center img-header-col my-auto'>
+    <div class="row toprow h-100 equal ">
+        <div class='col-12 col-md-3 align-items-center img-header-col my-auto py-3'>
             <img src='../../assets/images/download.svg' />
         </div>
-        <div class='col-3 col-md-2 align-items-center col-item' >
-            <div class='toprow-grey'>{{seosem ?  'ACTIVE SEO KEYWORDS' : 'ACTIVE SEM KEYWORDS'}}</div>
-            <div class='toprow-blk'>{{seosem ?  data.data.SEO['active seo keywords'] : data.data.SEM['active seo keywords']}}</div>
+        <div class='col-4 col-md-3 align-items-center col-item m-0' >
+            <div class='toprow-grey text-center no-border-sm'>{{seosem ?  'ACTIVE SEO KEYWORDS' : 'ACTIVE SEM KEYWORDS'}}</div>
+            <div class='toprow-blk text-center no-border-sm'>{{seosem ?  data.data.SEO['active seo keywords'] : data.data.SEM['active seo keywords']}}</div>
         </div>
-        <div class='col-3 col-md-2 align-items-center  col-item'>
-        <div class='toprow-grey'>ACTIVE PPC KEYWORDS</div>
-          <div class='toprow-blk'>{{seosem ?  data.data.SEO['active ppc keywords'] : data.data.SEM['active ppc keywords']}}</div>
+        <div class='col-4 col-md-3 align-items-center col-item m-0'>
+            <div class='toprow-grey text-center'># OF PRODUCTS</div>
+            <div class='toprow-blk text-center'>{{seosem ?  data.data.SEO['number of products'] : data.data.SEM['number of products']}}</div>
         </div>
-        <div class='col-3 col-md-2 align-items-center col-item'>
-            <div class='toprow-grey'># OF PRODUCTS</div>
-            <div class='toprow-blk'>{{seosem ?  data.data.SEO['number of products'] : data.data.SEM['number of products']}}</div>
-        </div>
-        <div class='col-3 col-md-2 align-items-center col-item'>
-            <div class='toprow-grey'>LAUNCH DATE</div>
-            <div class='toprow-blk'>{{seosem ?  data.data.SEO['launch date'] : data.data.SEM['launch date']}}</div>
+        <div class='col-4 col-md-3 align-items-center col-item m-0'>
+            <div class='toprow-grey text-center'>LAUNCH DATE</div>
+            <div class='toprow-blk text-center'>{{seosem ?  data.data.SEO['launch date'] : data.data.SEM['launch date']}}</div>
         </div>
     </div>
 </template>
@@ -33,7 +29,6 @@ export default {
       return this.$store.state.seosem
     }
   },
-
 }
 
 </script>
@@ -46,7 +41,13 @@ export default {
       margin-bottom: 20px;
       padding-top: 20px;
       padding-bottom:20px;
+
+    }
+    .toprow-grey, .toprow-blk{
       border-left: 1px solid #e7e7e7;
+    }
+    .toprow-grey{
+      min-height: 40px;
     }
   }
   @media (max-width: 991px) {
@@ -54,6 +55,17 @@ export default {
       text-align: center;
     }    
    }
+  @media (max-width: 767px) {
+    .no-border-sm {
+      border: none!important;
+    }
+  }
+   @media (max-width: 600px) {
+    .toprow-blk {
+      font-size: 4vw;
+    }
+  }
+
 
 </style>
 
